@@ -280,6 +280,28 @@
       color: aqua;
     }
 
+    .mobile-banner {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
+
+    @media (max-width: 600px) {
+      .web-banner-fr {
+        display: none;
+      }
+
+      .mobile-banner {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .logo1 {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -288,8 +310,10 @@
     <video class="web-banner-fr" autoplay loop muted playsinline>
       <source src="vid-banner-fr.mp4" type="video/mp4">
     </video>
+    <img src="mobilebanner.png" class="mobile-banner" alt="mobile-banner">
     <div class="banner-top">
       <img src="logo1.png" class="logo1" alt="logo1">
+      <div class="logo-placeholder"></div>
       <a href="index.html" class="language-switch">
         <img src="enflag.png" alt="English">
         EN
