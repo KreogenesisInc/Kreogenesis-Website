@@ -185,7 +185,7 @@
       .lauriers-container img.lauriers-mobile {
         display: block;
         width: 100%;
-        margin: 0;
+        margin: 0 auto;
       }
     }
 
