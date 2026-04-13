@@ -262,7 +262,7 @@ body::after {
 }
 
 /* Mobile & Maximum Squeeze (Final Phase) */
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .poster-wrapper {
     flex: 1 1 100% !important;
     max-width: 100% !important;
