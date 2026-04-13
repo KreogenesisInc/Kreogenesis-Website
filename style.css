@@ -233,15 +233,12 @@ body::after {
   height: auto;
 }
 
-/* --- MEDIA QUERIES --- */
-
 /* iPad & Squeezed Desktop (Middle Phase) */
-@media (max-width: 900px) {
-
+@media (max-width: 1024px) {
+  /* Keep Video Visible here, but swap Laurels */
   .lauriers-container img.lauriers-desktop {
     display: none !important;
   }
-
   .lauriers-container img.lauriers-mobile {
     display: block !important;
     width: 100% !important;
@@ -253,21 +250,29 @@ body::after {
     max-width: calc(50% - 2vw);
   }
 
+  /* Ensure Video stays visible for Tablet */
   .web-banner-fr {
-    display: none !important;
-  }
-
-  .mobile-banner {
     display: block !important;
   }
-
-  .logo1 {
+  .mobile-banner {
     display: none !important;
+  }
+  
+  .logo1 {
+    width: 25vw; /* Shrink logo slightly for tablet */
   }
 }
 
 /* Mobile & Maximum Squeeze (Final Phase) */
 @media (max-width: 750px) {
+  /* NOW we hide the video and show the image */
+  .web-banner-fr {
+    display: none !important;
+  }
+  .mobile-banner {
+    display: block !important;
+  }
+
   .poster-wrapper {
     flex: 1 1 100% !important;
     max-width: 100% !important;
@@ -289,39 +294,8 @@ body::after {
     text-align: left;
     max-width: 100%;
   }
-}
 
-/* Footer base */
-.base-container {
-  background-image: url("base.png");
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  height: 200px;
-}
-
-.footer-top a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 15px 0;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.footer-icon {
-  width: 1em;
-  height: 1em;
-  margin-right: 8px;
-}
-
-.copyright {
-  margin-top: 20px;
-  font-size: 10px;
-  opacity: 0.7;
-  color: aqua;
+  .logo1 {
+    display: none !important;
+  }
 }
