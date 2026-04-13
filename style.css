@@ -177,7 +177,7 @@
       height: auto;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
       .lauriers-container img.lauriers-desktop {
         display: none;
       }
@@ -185,6 +185,7 @@
       .lauriers-container img.lauriers-mobile {
         display: block;
         width: 100%;
+        margin: 0;
       }
     }
 
