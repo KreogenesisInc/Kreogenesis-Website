@@ -161,27 +161,30 @@
       width: 100%;
       padding: 0;
       margin: 0;
-      overflow: hidden;
+      line-height: 0;
+      background: black;
     }
 
-    .lauriers-container img {
-      max-width: 100%;
+    .lauriers-container img.lauriers-desktop {
+      width: 100%;
       height: auto;
       display: block;
     }
 
-    .lauriers-mobile {
-      display: none;}
+    .lauriers-container img.lauriers-mobile {
+      display: none;
+      width: 100%;
+      height: auto;
+    }
 
     @media (max-width: 600px) {
-      .lauriers-desktop {
+      .lauriers-container img.lauriers-desktop {
         display: none;
       }
 
-      .lauriers-mobile {
+      .lauriers-container img.lauriers-mobile {
         display: block;
         width: 100%;
-        margin: 0 auto;
       }
     }
 
