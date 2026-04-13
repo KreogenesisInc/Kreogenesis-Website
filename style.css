@@ -59,6 +59,12 @@ body::after {
   line-height: 0;
 }
 
+.mobile-banner {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
 .banner-top {
   position: absolute;
   top: 8%;
@@ -231,6 +237,7 @@ body::after {
 
 /* iPad & Squeezed Desktop (Middle Phase) */
 @media (max-width: 900px) {
+
   .lauriers-container img.lauriers-desktop {
     display: none !important;
   }
@@ -247,17 +254,15 @@ body::after {
   }
 
   .web-banner-fr {
-    display: none;
+    display: none !important;
   }
 
   .mobile-banner {
-    display: block;
-    width: 100%;
-    height: auto;
+    display: block !important;
   }
 
   .logo1 {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -319,8 +324,4 @@ body::after {
   font-size: 10px;
   opacity: 0.7;
   color: aqua;
-}
-
-.mobile-banner {
-  display: none;
 }
