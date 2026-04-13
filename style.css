@@ -158,9 +158,20 @@
     }
 
     .lauriers-container img {
-      width: 100%;
+      max-width: 100%;
       height: auto;
       display: block;
+    }
+
+    .lauriers-mobile { display: none;}
+
+    @media (max-width: 600px) {
+      .lauriers-desktop { display: none;}
+      .lauriers-mobile {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+      }
     }
 
     /* Nuages / posters */
