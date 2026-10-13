@@ -350,7 +350,7 @@ body::after {
 
 .featured-film-layout {
   display: grid;
-  grid-template-columns: minmax(0, 380px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
   grid-template-rows: auto 1fr;
   column-gap: 40px;
   row-gap: 0;
