@@ -244,6 +244,15 @@ body::after {
   height: 200px;
 }
 
+.footer-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
 .footer-top a {
   display: flex;
   align-items: center;
@@ -550,5 +559,187 @@ body::after {
 @media (max-width: 850px) {
   .featured-film-heading {
     margin-bottom: 0 !important;
+  }
+}
+
+/* ========================================
+   FESTIVAL PHOTO GALLERY
+======================================== */
+
+#festival-gallery {
+    width: 100%;
+    padding: 80px 5%;
+    background-color: #000;
+    color: #fff;
+}
+
+#festival-gallery .gallery-category {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+#festival-gallery .gallery-category h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.4;
+    margin: 0 0 35px;
+    color: #fff;
+}
+
+/* Photo grid */
+
+#festival-gallery .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+/* Images */
+
+#festival-gallery .photo-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    #festival-gallery .photo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    #festival-gallery {
+        padding: 50px 5%;
+    }
+
+    #festival-gallery .gallery-category h2 {
+        font-size: 21px;
+        letter-spacing: 1.5px;
+    }
+
+    #festival-gallery .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    #festival-gallery .gallery-category {
+        margin-bottom: 55px;
+    }
+}
+
+/* Gallery titles aligned left */
+#festival-gallery .gallery-category h2 {
+    text-align: left !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* TORONTO SHORTS — ONE COLUMN WIDE */
+
+#festival-gallery #toronto-shorts-gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 24px;
+}
+
+#festival-gallery #toronto-shorts-gallery img {
+    grid-column: 1 !important;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #festival-gallery #toronto-shorts-gallery {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* BEHIND THE SCENES — THREE LARGE PHOTOS */
+
+#festival-gallery #behind-the-scenes-gallery {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+}
+
+#festival-gallery #behind-the-scenes-gallery img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* CANNES — TWO COLUMNS */
+#festival-gallery #cannes-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* FESTIVAL DES FILMS DU MONDE — TWO COLUMNS */
+#festival-gallery #films-du-monde-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* MOBILE — ONE COLUMN */
+@media (max-width: 600px) {
+    #festival-gallery #cannes-gallery,
+    #festival-gallery #films-du-monde-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CENTER THE SINGLE TORONTO PHOTO */
+
+#festival-gallery #toronto-shorts-gallery {
+    justify-items: center;
+}
+
+#festival-gallery #toronto-shorts-gallery img {
+    grid-column: 1 / -1 !important;
+    width: calc((100% - 24px) / 2) !important;
+    max-width: 100%;
+    height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #festival-gallery #toronto-shorts-gallery img {
+        width: 100% !important;
+    }
+}
+
+/* FOOTER — MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .footer-top {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .footer-top a {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  .footer-icon {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 5px;
   }
 }
