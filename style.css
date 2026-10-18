@@ -743,3 +743,82 @@ body::after {
     margin-right: 5px;
   }
 }
+
+/* PROMO PIX 1 */
+#promo-pix1 {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 24px;
+    padding: 0 5vw;
+    box-sizing: border-box;
+}
+
+#promo-pix1 img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto;
+}
+
+/* PROMO PIX 2 — PHOTO À GAUCHE, TEXTE À DROITE */
+.promo-section2 {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 0 5vw;
+}
+
+#promo-pix2 {
+    flex: 0 0 40%;
+    min-width: 0;
+}
+
+#promo-pix2 img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+.promo-section2 .promo-text {
+    flex: 1;
+    min-width: 0;
+    line-height: 1.6;
+    font-size: clamp(16px, 1.5vw, 24px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    .promo-section2 {
+        display: flex;
+        flex-direction: column;
+        margin: 30px 5vw;
+
+    }
+
+    #promo-pix2 {
+        width: 100%;
+        flex: none;
+
+    }
+
+    #promo-pix2 img {
+        display: block;
+        width: 100%;
+        height: auto;
+
+    }
+
+    .promo-section2 .promo-text {
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+}
+
+.promo-section2 {
+    margin-bottom: 80px;
+}
